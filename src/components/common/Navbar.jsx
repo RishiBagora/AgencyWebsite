@@ -60,9 +60,9 @@ function Navbar() {
           <Link
             to="/"
             className="font-heading text-[22px] font-semibold tracking-tight
-                       text-[var(--color-text)]"
+                       text-[var(--color-)]"
           >
-            {siteConfig.name}
+            {siteConfig.siteName}
           </Link>
 
           {/* Desktop Navigation */}

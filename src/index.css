@@ -44,3 +44,17 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
 }
+
+:root {
+  /* Spacing ko tight karne ke liye */
+  --section-padding: 5rem; /* Pehle 28 ya 32 tha, ab 20-24px equivalent */
+  
+  /* Font Sizes ko refine karein */
+  --font-size-h2: 2.25rem; /* Mobile */
+  --font-size-h2-desktop: 3.25rem; /* Desktop - Pehle 5xl/6xl tha jo giant lagta hai */
+}
+
+@media (min-width: 1024px) {
+  h2 { font-size: var(--font-size-h2-desktop) !important; line-height: 1.1; }
+  p { font-size: 1.05rem !important; } /* Paragraph ko subtle rakhein */
+}
