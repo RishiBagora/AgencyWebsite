@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import portfolioData from "../../data/portfolioData";
 
 /* animation system */
 const container = {
@@ -27,31 +28,13 @@ const item = {
 };
 
 function PortfolioPreview() {
-  const projects = [
-    {
-      title: "Hotel Bhakti Palace",
-      category: "Hotel Website",
-      image: "/images/portfolio/hotel-bhakti.jpg",
-      link: "/portfolio/hotel-bhakti-palace",
-    },
-    {
-      title: "Local Business Website",
-      category: "Business Website",
-      image: "/images/portfolio/business-site.jpg",
-      link: "/portfolio/business-website",
-    },
-    {
-      title: "E-Commerce Store",
-      category: "E-commerce Website",
-      image: "/images/portfolio/ecommerce.jpg",
-      link: "/portfolio/ecommerce-store",
-    },
-  ];
+  // 🔹 show only first 3 projects for preview
+  const projects = portfolioData.slice(0, 3);
 
   return (
     <section className="bg-[var(--color-bg)]">
       <div className="mx-auto max-w-7xl px-6 py-28">
-        
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -79,7 +62,7 @@ function PortfolioPreview() {
         >
           {projects.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.id || index}
               variants={item}
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
@@ -95,7 +78,7 @@ function PortfolioPreview() {
               {/* Image */}
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
-                  src={project.image}
+                  src={project.thumbnail}
                   alt={`${project.title} website project`}
                   loading="lazy"
                   className="
@@ -105,7 +88,7 @@ function PortfolioPreview() {
                   "
                 />
 
-                {/* RED TINT OVERLAY */}
+                {/* ACCENT TINT OVERLAY */}
                 <div
                   className="
                     pointer-events-none
@@ -123,12 +106,13 @@ function PortfolioPreview() {
                 <p className="text-xs uppercase tracking-wide text-[var(--color-accent)]">
                   {project.category}
                 </p>
+
                 <h3 className="mt-2 text-lg font-semibold text-[var(--color-text)]">
                   {project.title}
                 </h3>
 
                 <Link
-                  to={project.link}
+                  to={`/portfolio/${project.slug}`}
                   className="
                     mt-4 inline-flex items-center
                     text-sm font-medium

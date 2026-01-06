@@ -23,6 +23,7 @@ const Contact = () => {
 
   return (
     <>
+    <div className="mt-15">
       <ContactHero />
       <ContactIntro />
       <ContactOptions />
@@ -31,6 +32,8 @@ const Contact = () => {
       </section>
       <TrustSignals />
       <ContactCTA />
+    </div>
+      
     </>
   );
 };
