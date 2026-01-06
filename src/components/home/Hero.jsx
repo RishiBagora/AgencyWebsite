@@ -125,8 +125,9 @@ function Hero() {
                 </div>
                 
                 {/* Mockup Content */}
-                <div className="aspect-[16/11] object- w-full bg-[#f8f9fa] relative flex items-center justify-center  overflow-hidden">
-                    <img src="./public/one.png" />
+                <div className="aspect-[16/9] object- w-full bg-[#f8f9fa] relative flex items-center justify-center  overflow-hidden">
+                    {/* <img src="./public/one.png" /> */}
+                    <video autoPlay muted loop className="object-" src="./public/herovideo.mp4"></video>
                    {/* <div className="flex flex-col items-center gap-4 opacity-40">
                       <div className="w-16 h-16 rounded-full border-4 border-[var(--color-accent)] border-t-transparent animate-spin" />
                       <p className="font-medium text-gray-500 uppercase tracking-tighter">Rendering Portfolio...</p>
