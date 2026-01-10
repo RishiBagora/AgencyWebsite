@@ -8,8 +8,14 @@ import WhyWeExist from '../components/about/WhyWeExist'
 import ProcessSnapshot from '../components/about/ProcessSnapshot'
 import TrustStats from '../components/about/TrustStats'
 import AboutCTASection from '../components/about/AboutCTASection'
+import useSEO from '../hooks/useSEO'
 
 const About = () => {
+  useSEO({
+    title: "About Us | {The Web Kulture} – India’s Trusted Web Development Agency",
+    description: "Discover TheWebKulture, a top website development agency in India. Learn about our mission, values, and commitment to delivering exceptional digital solutions.",
+    canonical: "https://thewebkulture.vercel.app/about"
+  });
   return (
     <div>
         <AboutHero/>

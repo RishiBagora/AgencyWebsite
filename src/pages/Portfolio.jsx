@@ -8,8 +8,16 @@ import { useState } from 'react'
 import PortfolioStats from '../components/portfolio/PortfolioStats'
 import PortfolioCTA from '../components/portfolio/PortfolioCTA'
 import CTA from '../components/home/CTA'
+import useSEO from '../hooks/useSEO'
 
 export default function Portfolio() {
+
+
+  useSEO({
+    title: "Portfolio | Our Website Design & Development Work| TheWebKulture",
+    description: "Explore TheWebKulture's portfolio of stunning websites and digital solutions crafted for Indian businesses. See our expertise in action across various industries.",
+    canonical: "https://thewebkulture.vercel.app/portfolio"
+  });
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects =

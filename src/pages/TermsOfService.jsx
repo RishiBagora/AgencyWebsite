@@ -1,5 +1,6 @@
 import React from 'react';
 import siteConfig from '../config/siteConfig';
+import useSEO from '../hooks/useSEO';
 
 function TermsOfService() {
   const lastUpdated = new Date().toLocaleDateString('en-IN', {
@@ -8,6 +9,7 @@ function TermsOfService() {
     year: 'numeric'
   });
 
+  
   return (
     <section className="bg-[var(--color-bg)]">
       <div className="mx-auto max-w-4xl px-6 py-24 text-[var(--color-text)]">

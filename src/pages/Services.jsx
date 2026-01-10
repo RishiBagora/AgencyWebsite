@@ -8,9 +8,16 @@ import ProcessSnapshot from '../components/services/ProcessSnapshot'
 import TechStack from '../components/services/TechStack'
 import FAQs from '../components/services/FAQ'
 import ServicesCTA from '../components/services/ServicesCTA'
+import useSEO from '../hooks/useSEO'
 
 
 const Services = () => {
+
+  useSEO({
+    title: "Our Services | Website & Digital Solutions for Indian Businesses",
+    description: "Explore TheWebKulture's comprehensive web development services, including custom websites, e-commerce solutions, UI/UX design, and digital marketing for Indian businesses.",
+    canonical: "https://thewebkulture.vercel.app/services"
+  });
   return (
     <div>
         <ServicesHero/>

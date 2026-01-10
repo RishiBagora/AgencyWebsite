@@ -1,6 +1,7 @@
 import React from 'react';
 import siteConfig from '../config/siteConfig';
 
+
 function PrivacyPolicy() {
   const lastUpdated = new Date().toLocaleDateString('en-IN', {
     day: 'numeric',
