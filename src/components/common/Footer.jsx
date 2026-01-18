@@ -145,7 +145,7 @@ function Footer() {
               </p>
             </div>
             <Link
-              to="/contact#"
+              to="/contact"
               target="_blank"
               className="inline-flex items-center justify-center px-10 py-5 rounded-2xl bg-white text-black text-[11px] font-black uppercase tracking-[0.25em] hover:bg-[var(--color-accent)] hover:text-white transition-all duration-500 shadow-2xl"
             >

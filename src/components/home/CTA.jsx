@@ -34,11 +34,12 @@ function CTA() {
             </p>
 
             {/* Buttons: Clean & Elegant */}
+            <Link to="/contact">
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center items-center">
               <motion.a
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                href={siteConfig.cta?.primary || "/contact"}
+                
                 className="
                   inline-flex items-center justify-center
                   px-7 py-3.5 rounded-xl
@@ -50,7 +51,7 @@ function CTA() {
               >
                 Get Free Consultation
               </motion.a>
-
+</Link>
               {siteConfig.cta?.phone && (
                 <motion.a
                   whileHover={{ y: -2 }}
