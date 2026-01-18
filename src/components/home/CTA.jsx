@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import siteConfig from "../../config/siteConfig";
-
+import { Link } from "react-router-dom";
 function CTA() {
   return (
     <section className="bg-[var(--color-bg)] py-16 md:py-24">
@@ -36,7 +36,8 @@ function CTA() {
             {/* Buttons: Clean & Elegant */}
             
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center items-center">
-            <Link to="/contact">  <motion.a
+            <Link to="/contact">  
+            <motion.a
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 

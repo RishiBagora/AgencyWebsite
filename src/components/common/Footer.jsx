@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import siteConfig from "../../config/siteConfig";
-
+import React from "react";
 function Footer() {
   const year = new Date().getFullYear();
 
