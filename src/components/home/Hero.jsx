@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import siteConfig from "../../config/siteConfig";
+import { Link } from "react-router-dom";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -68,8 +69,9 @@ function Hero() {
               variants={fadeUp}
               className="mt-10 flex flex-wrap gap-4"
             >
+              <Link to="/contact">
               <a
-                href="/contact"
+                
                 className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-[var(--color-accent)] font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-opacity-90 shadow-lg shadow-[var(--color-accent-soft)]"
               >
                 Get Started
@@ -77,7 +79,7 @@ function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5-5 5M6 7l5 5-5 5" />
                 </svg>
               </a>
-
+</Link>
               <a
                 href="/portfolio"
                 className="inline-flex items-center justify-center px-8 py-4 font-bold text-[var(--color-text)] transition-all duration-200 bg-transparent border-2 border-[var(--color-border)] rounded-xl hover:bg-[var(--color-surface)] hover:border-[var(--color-accent)]"
