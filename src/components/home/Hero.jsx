@@ -80,12 +80,14 @@ function Hero() {
                 </svg>
               </a>
 </Link>
+<Link to="/portfolio">
               <a
-                href="/portfolio"
+                
                 className="inline-flex items-center justify-center px-8 py-4 font-bold text-[var(--color-text)] transition-all duration-200 bg-transparent border-2 border-[var(--color-border)] rounded-xl hover:bg-[var(--color-surface)] hover:border-[var(--color-accent)]"
               >
                 Our Work
               </a>
+              </Link>
             </motion.div>
 
             {/* TRUST BADGES */}
