@@ -15,7 +15,7 @@ import keywords from '../data/keywords'
 
 const Home = () => {
   useSEO({
-  title: "Home - Premium Website Development Agency in India | {TheWebKulture}",
+  title: "Premium Website Development Agency in India | TheWebKulture",
   description: "Professional website development, e-commerce, UI/UX, and business-focused digital solutions for Indian brands. Fast, modern, SEO-friendly websites" + "Services: " + keywords.home.join(", "),
   canonical: "https://thewebkulture.vercel.app/"
 });
