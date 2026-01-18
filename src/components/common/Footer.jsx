@@ -37,10 +37,10 @@ function Footer() {
   return (
     <footer className="bg-[var(--color-surface)] border-t border-[var(--color-border)] pt-20">
       <div className="mx-auto max-w-7xl px-6">
-        
+
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 mb-20">
-          
+
           {/* Brand Column */}
           <div className="lg:col-span-4">
             <Link to="/" className="group flex items-center gap-2 font-heading text-2xl font-bold tracking-tighter text-[var(--color-text)]">
@@ -52,7 +52,7 @@ function Footer() {
             <p className="mt-6 text-sm md:text-base leading-relaxed text-[var(--color-text-muted)] max-w-sm">
               Strategically designed and reliably engineered digital assets for forward-thinking businesses.
             </p>
-            
+
             {/* Social Links (Working SVGs) */}
             <div className="mt-8 flex gap-3">
               {socialLinks.map((social) => (
@@ -74,7 +74,7 @@ function Footer() {
 
           {/* Links Columns */}
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
-            
+
             {/* Column 1: Navigation (Fixed Routes) */}
             <div>
               <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--color-text)] mb-8">
@@ -134,7 +134,7 @@ function Footer() {
         {/* Dynamic CTA Bar */}
         <div className="relative overflow-hidden rounded-[2.5rem] bg-gray-950 p-8 md:p-14 mb-10 group">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-accent)] opacity-10 blur-[120px] -mr-48 -mt-48 group-hover:opacity-20 transition-opacity duration-1000" />
-          
+
           <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-10">
             <div className="max-w-xl">
               <h3 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
@@ -158,8 +158,8 @@ function Footer() {
         <div className="border-t border-[var(--color-border)] py-10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-text-muted)] opacity-50">
           <p>© {year} {siteConfig.siteName}. Crafted with precision in India.</p>
           <div className="flex gap-10">
-             <Link to="/privacy-policy" className="hover:text-[var(--color-accent)] transition-colors">Privacy</Link>
-             <Link to="/terms" className="hover:text-[var(--color-accent)] transition-colors">Terms</Link>
+            <Link to="/privacy-policy" className="hover:text-[var(--color-accent)] transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-[var(--color-accent)] transition-colors">Terms</Link>
           </div>
         </div>
 
