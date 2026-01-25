@@ -14,9 +14,9 @@ export default function Portfolio() {
 
 
   useSEO({
-    title: "Portfolio | Our Website Design & Development Work| TheWebKulture",
-    description: "Explore TheWebKulture's portfolio of stunning websites and digital solutions crafted for Indian businesses. See our expertise in action across various industries.",
-    canonical: "https://thewebkulture.vercel.app/portfolio"
+    title: "Portfolio | Our Website Design & Development Work| Arco Creative Studio",
+    description: "Explore Arco Creative Studio portfolio of stunning websites and digital solutions crafted for Indian businesses. See our expertise in action across various industries.",
+    canonical: "https://arcocreativestudio.vercel.app/portfolio"
   });
   const [activeCategory, setActiveCategory] = useState("All");
 

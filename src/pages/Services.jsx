@@ -15,8 +15,8 @@ const Services = () => {
 
   useSEO({
     title: "Our Services | Website & Digital Solutions for Indian Businesses",
-    description: "Explore TheWebKulture's comprehensive web development services, including custom websites, e-commerce solutions, UI/UX design, and digital marketing for Indian businesses.",
-    canonical: "https://thewebkulture.vercel.app/services"
+    description: "Explore Arco Creative Studio comprehensive web development services, including custom websites, e-commerce solutions, UI/UX design, and digital marketing for Indian businesses.",
+    canonical: "https://arcocreativestudio.vercel.app/services"
   });
   return (
     <div>

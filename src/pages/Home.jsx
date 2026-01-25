@@ -15,9 +15,9 @@ import keywords from '../data/keywords'
 
 const Home = () => {
   useSEO({
-  title: "Website development agency in nathdwara | TheWebKulture",
+  title: "Arco Creative Studio | Website development agency in nathdwara ",
   description: "Professional website development, e-commerce, UI/UX, and business-focused digital solutions for Indian brands. Fast, modern, SEO-friendly websites" + "Services: " + keywords.home.join(", "),
-  canonical: "https://thewebkulture.vercel.app/"
+  canonical: "https://arcocreativestudio.vercel.app/"
 });
   return (
     <div>

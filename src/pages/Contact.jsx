@@ -11,9 +11,9 @@ const Contact = () => {
   const location = useLocation();
 
   useSEO({
-    title: "Contact Us | Get in Touch with TheWebKulture – India's Trusted Web Development Agency",
-    description: "Reach out to TheWebKulture for expert web development services in India. Contact us today to discuss your project and discover how we can help your business thrive online.",
-    canonical: "https://thewebkulture.vercel.app/contact"
+    title: "Contact Us | Get in Touch with Arco Creative Studio – India's Trusted Web Development Agency",
+    description: "Reach out to Arco Creative Studio for expert web development services in India. Contact us today to discuss your project and discover how we can help your business thrive online.",
+    canonical: "https://arcocreativestudio.vercel.app/contact"
   });
   useEffect(() => {
     if (location.hash === "#contact-form") {

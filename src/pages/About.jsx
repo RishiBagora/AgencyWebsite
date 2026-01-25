@@ -12,9 +12,9 @@ import useSEO from '../hooks/useSEO'
 
 const About = () => {
   useSEO({
-    title: "About Us | {The Web Kulture} – India’s Trusted Web Development Agency",
-    description: "Discover TheWebKulture, a top website development agency in India. Learn about our mission, values, and commitment to delivering exceptional digital solutions.",
-    canonical: "https://thewebkulture.vercel.app/about"
+    title: "Arco Creative Studio – India’s Trusted Web Development Agency",
+    description: "Discover Arco Creative Studio, a top website development agency in India. Learn about our mission, values, and commitment to delivering exceptional digital solutions.",
+    canonical: "https://arcocreativestudio.vercel.app/about"
   });
   return (
     <div>
