@@ -10,6 +10,7 @@ import CTA from '../components/home/CTA'
 import TrustStats from '../components/about/TrustStats'
 import useSEO from '../hooks/useSEO'
 import keywords from '../data/keywords'
+import TrustStrip from '../components/home/TrustStrip'
 
 
 
@@ -22,8 +23,8 @@ const Home = () => {
   return (
     <div>
         <Hero/>
-        {/* <TrustStrip/> */}
         <TrustStats/>
+        {/* <TrustStrip/> */}
         <ServicesPreview/>
         <WhyChooseUs/>
         <PortfolioPreview/>

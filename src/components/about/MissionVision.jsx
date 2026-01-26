@@ -28,7 +28,7 @@ const MissionVision = () => {
 
   return (
     <section 
-      className="bg-white py-20 lg:py-32 px-6 sm:px-12 lg:px-24 border-t border-gray-100"
+      className="bg-[var(--color-bg)] py-20 lg:py-32 px-6 sm:px-12 lg:px-24 border-t border-gray-100"
       aria-label="Our Mission and Vision"
     >
       <div className="max-w-7xl mx-auto">

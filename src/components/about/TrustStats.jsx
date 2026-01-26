@@ -1,124 +1,76 @@
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion, useInView, useSpring, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const STATS = [
-  {
-    value: 50,
-    suffix: "+",
-    label: "Projects Delivered",
-    description: "Across different industries and business sizes",
-    animate: true,
-  },
-  {
-    value: 5,
-    suffix: "+",
-    label: "Years of Experience",
-    description: "Hands-on experience in design and development",
-    animate: true,
-  },
-  {
-    value: "Pan-India",
-    suffix: "",
-    label: "Client Presence",
-    description: "Serving businesses across multiple states",
-    animate: false,
-  },
-  {
-    value: "Long-Term",
-    suffix: "",
-    label: "Client Relationships",
-    description: "Built on trust, results, and ongoing support",
-    animate: false,
-  },
+  { value: 50, suffix: "+", label: "Projects Delivered", description: "Across diverse industries." },
+  { value: 5, suffix: "+", label: "Years Experience", description: "Design and development." },
+  { value: "Pan-India", suffix: "", label: "Client Presence", description: "Serving multiple states." },
+  { value: "Long-Term", suffix: "", label: "Relationships", description: "Built on ongoing trust." },
 ];
 
-function CountUp({ value, suffix }) {
-  const [count, setCount] = useState(0);
+function CountUp({ value }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const springValue = useSpring(0, { stiffness: 45, damping: 20 });
+  const displayValue = useTransform(springValue, (v) => Math.floor(v));
 
   useEffect(() => {
-    let start = 0;
-    const duration = 900;
-    const increment = value / (duration / 16);
+    if (isInView && typeof value === "number") springValue.set(value);
+  }, [isInView, value, springValue]);
 
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= value) {
-        setCount(value);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-
-    return () => clearInterval(timer);
-  }, [value]);
-
-  return (
-    <span>
-      {count}
-      {suffix}
-    </span>
-  );
+  return <motion.span ref={ref}>{displayValue}</motion.span>;
 }
 
- function TrustStats() {
+function TrustStats() {
   return (
-    <section className="bg-[var(--color-surface)] border-y border-[var(--color-border)]">
-      <div className="mx-auto max-w-7xl px-6 py-24">
-
-        {/* Optional Header */}
-        <div className="mb-16 max-w-2xl">
-          <span className="text-sm font-semibold text-[var(--color-accent)]">
-            Our Experience
-          </span>
-
-          <h2 className="mt-4 font-heading text-3xl md:text-4xl font-bold text-[var(--color-text)]">
-            Proven Experience You Can{" "}
-            <span className="text-[var(--color-accent)]">Trust</span>
+    <section className="bg-[var(--color-bg)] py-20">
+      <div className="mx-auto max-w-7xl px-6">
+        
+        {/* Simplified Header */}
+        <header className="mb-20 border-l-2 border-[var(--color-accent)] pl-6">
+          <h2 className="text-2xl md:text-3xl font-light tracking-tight text-[var(--color-text)]">
+            The impact of <span className="font-semibold text-[var(--color-accent)]">consistency</span>.
           </h2>
-        </div>
+        </header>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 gap-12 text-center sm:grid-cols-2 lg:grid-cols-4">
+        {/* Minimal Grid */}
+        <div className="grid grid-cols-2 gap-y-16 gap-x-4 lg:grid-cols-4">
           {STATS.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{
-                duration: 0.35,
-                ease: "easeOut",
-                delay: index * 0.08,
-              }}
-              className="px-4"
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="relative lg:border-r last:border-r-0 border-[var(--color-border)] pr-4"
             >
               {/* Value */}
-              <div className="text-4xl font-bold text-[var(--color-accent)]">
-                {stat.animate ? (
-                  <CountUp value={stat.value} suffix={stat.suffix} />
+              <div className="text-3xl md:text-4xl font-medium tracking-tighter text-[var(--color-text)] tabular-nums">
+                {typeof stat.value === "number" ? (
+                  <>
+                    <CountUp value={stat.value} />
+                    <span className="text-[var(--color-accent)]">{stat.suffix}</span>
+                  </>
                 ) : (
-                  <span>{stat.value}</span>
+                  <span className="text-2xl md:text-3xl">{stat.value}</span>
                 )}
               </div>
 
-              {/* Label */}
-              <p className="mt-3 text-sm font-semibold text-[var(--color-text)]">
-                {stat.label}
-              </p>
-
-              {/* Description */}
-              <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
-                {stat.description}
-              </p>
+              {/* Label & Description */}
+              <div className="mt-4">
+                <p className="text-xs font-bold uppercase tracking-widest text-[var(--color-accent)]">
+                  {stat.label}
+                </p>
+                <p className="mt-1 text-sm text-[var(--color-text-muted)] max-w-[180px] leading-snug">
+                  {stat.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
 }
 
-export default TrustStats
-// import { motion, useInView } from "framer-motion"; 
+export default TrustStats;

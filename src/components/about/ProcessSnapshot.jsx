@@ -1,225 +1,85 @@
 import { motion } from "framer-motion";
 
 const STEPS = [
-  {
-    number: "01",
-    title: "Understand",
-    description:
-      "We understand your business goals, audience, and requirements before starting.",
-  },
-  {
-    number: "02",
-    title: "Plan",
-    description:
-      "We create a clear structure, scope, and timeline to avoid confusion later.",
-  },
-  {
-    number: "03",
-    title: "Design",
-    description:
-      "We design a clean, user-friendly interface aligned with your brand.",
-  },
-  {
-    number: "04",
-    title: "Build",
-    description:
-      "We develop a fast, responsive, and SEO-ready website.",
-  },
-  {
-    number: "05",
-    title: "Support",
-    description:
-      "We support and guide you even after the website goes live.",
-  },
+  { number: "01", title: "Understand", desc: "Deep dive into your business goals and audience behavior." },
+  { number: "02", title: "Plan", desc: "Defining architecture, technical stack, and clear roadmaps." },
+  { number: "03", title: "Design", desc: "User-centric interfaces that reflect your brand identity." },
+  { number: "04", title: "Build", desc: "High-performance engineering with clean, scalable code." },
+  { number: "05", title: "Support", desc: "Post-launch monitoring and strategic growth updates." },
 ];
 
 function ProcessSnapshot() {
   return (
-    <section className="bg-[var(--color-bg)]">
-      <div className="mx-auto max-w-7xl px-6 py-28">
-
-        {/* Header */}
-        <div className="max-w-2xl">
-          <span className="text-sm font-semibold text-[var(--color-accent)]">
-            How We Work
-          </span>
-
-          <h2 className="mt-4 font-heading text-3xl md:text-4xl font-bold text-[var(--color-text)]">
-            A Simple, Transparent{" "}
-            <span className="text-[var(--color-accent)]">Process</span>
-          </h2>
-
-          <p className="mt-4 text-sm leading-relaxed text-[var(--color-text-muted)]">
-            A structured approach that keeps projects clear, predictable, and
-            stress-free.
-          </p>
+    <section className="bg-[var(--color-bg)] py-24 md:py-48">
+      <div className="mx-auto max-w-7xl px-6">
+        
+        {/* Editorial Header */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-32 items-end">
+          <div className="lg:col-span-8">
+            <motion.span 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="text-[var(--color-accent)] font-bold text-[10px] uppercase tracking-[0.5em] mb-6 block"
+            >
+              The Method
+            </motion.span>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="text-5xl md:text-8xl font-bold text-[var(--color-text)] tracking-tighter leading-[0.9]"
+            >
+              Strategic <br />
+              <span className="text-[var(--color-text-muted)] italic font-light">Execution.</span>
+            </motion.h2>
+          </div>
+          <div className="lg:col-span-4">
+            <p className="text-lg text-[var(--color-text-muted)] leading-relaxed font-medium opacity-80">
+              A roadmap engineered for clarity, speed, and long-term business scalability.
+            </p>
+          </div>
         </div>
 
-        {/* Steps */}
-        <div className="mt-20 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        {/* Process Flow - Clean Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 lg:gap-8">
           {STEPS.map((step, i) => (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{
-                duration: 0.35,
-                ease: "easeOut",
-                delay: i * 0.08,
+                duration: 0.8,
+                ease: [0.16, 1, 0.3, 1],
+                delay: i * 0.1,
               }}
-              className="
-                relative
-                border border-[var(--color-border)]
-                bg-[var(--color-surface)]
-                p-6
-                transition-colors
-                hover:border-[var(--color-accent)]
-              "
+              className="group relative"
             >
-              {/* Step Number */}
-              <div
-                className="
-                  mb-4
-                  flex h-8 w-8 items-center justify-center
-                  rounded-full
-                  bg-[var(--color-accent)]
-                  text-xs font-semibold text-white
-                "
-              >
-                {step.number}
+              {/* Massive Number - Acting as Background */}
+              <div className="relative mb-10 overflow-hidden">
+                <span className="text-7xl md:text-8xl font-black text-[var(--color-text)] opacity-[0.03] group-hover:opacity-[0.08] group-hover:text-[var(--color-accent)] transition-all duration-700 tabular-nums inline-block">
+                  {step.number}
+                </span>
+                {/* Horizontal Accent on Hover */}
+                <motion.div 
+                  className="absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--color-accent)] group-hover:w-full transition-all duration-700"
+                />
               </div>
 
-              <h3 className="text-sm font-semibold text-[var(--color-text)]">
-                {step.title}
-              </h3>
-
-              <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
-                {step.description}
-              </p>
+              {/* Content */}
+              <div className="relative">
+                <h3 className="text-xl font-bold text-[var(--color-text)] mb-4 tracking-tight group-hover:translate-x-1 transition-transform duration-500">
+                  {step.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-[var(--color-text-muted)] max-w-[180px]">
+                  {step.desc}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
 }
 
 export default ProcessSnapshot;
-
-// import { motion } from "framer-motion";
-
-// const STEPS = [
-//   {
-//     number: "01",
-//     title: "Understand",
-//     description: "Deep dive into your business goals and audience.",
-//   },
-//   {
-//     number: "02",
-//     title: "Plan",
-//     description: "Structured roadmap with clear scope and timelines.",
-//   },
-//   {
-//     number: "03",
-//     title: "Design",
-//     description: "Sleek, conversion-focused UI tailored for your brand.",
-//   },
-//   {
-//     number: "04",
-//     title: "Build",
-//     description: "Clean code development with a focus on speed & SEO.",
-//   },
-//   {
-//     number: "05",
-//     title: "Support",
-//     description: "Continuous guidance long after the site goes live.",
-//   },
-// ];
-
-// function ProcessSnapshot() {
-//   return (
-//     <section className="bg-[var(--color-bg)] py-20 md:py-24 overflow-hidden">
-//       <div className="mx-auto max-w-7xl px-6">
-        
-//         {/* Header - Minimal & Tight */}
-//         <div className="max-w-xl mb-16 md:mb-20">
-//           <motion.span 
-//             initial={{ opacity: 0 }}
-//             whileInView={{ opacity: 1 }}
-//             className="text-[9px] uppercase tracking-[0.4em] font-black text-[var(--color-accent)] mb-3 block"
-//           >
-//             How We Work
-//           </motion.span>
-//           <h2 className="font-heading text-3xl md:text-5xl font-bold tracking-tighter text-[var(--color-text)] leading-tight">
-//             A Simple, Transparent <br />
-//             <span className="text-[var(--color-accent)] italic">Workflow</span>
-//           </h2>
-//           <p className="mt-4 text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed">
-//             A structured approach that keeps your project clear, predictable, and stress-free.
-//           </p>
-//         </div>
-
-//         {/* Steps Grid - Connected Design */}
-//         <div className="relative mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
-//           {/* Subtle connecting line (Desktop Only) */}
-//           <div className="hidden lg:block absolute top-1/2 left-0 w-full h-px bg-[var(--color-border)] -translate-y-1/2 z-0" />
-
-//           {STEPS.map((step, i) => (
-//             <motion.div
-//               key={step.number}
-//               initial={{ opacity: 0, y: 20 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               viewport={{ once: true }}
-//               transition={{ duration: 0.5, delay: i * 0.1 }}
-//               className="group relative z-10"
-//             >
-//               <div className="
-//                 h-full flex flex-col
-//                 rounded-[1.5rem]
-//                 border border-[var(--color-border)]
-//                 bg-[var(--color-surface)]
-//                 p-6 md:p-8
-//                 transition-all duration-500
-//                 hover:border-[var(--color-accent)]
-//                 hover:shadow-2xl hover:shadow-[var(--color-accent-soft)]
-//                 hover:-translate-y-2
-//               ">
-//                 {/* Step Number Badge */}
-//                 <div className="
-//                   mb-6
-//                   flex h-10 w-10 items-center justify-center
-//                   rounded-xl
-//                   bg-[var(--color-bg-soft)]
-//                   text-xs font-black text-[var(--color-accent)]
-//                   group-hover:bg-[var(--color-accent)]
-//                   group-hover:text-white
-//                   transition-all duration-500
-//                 ">
-//                   {step.number}
-//                 </div>
-
-//                 <h3 className="text-base font-bold text-[var(--color-text)] tracking-tight">
-//                   {step.title}
-//                 </h3>
-
-//                 <p className="mt-2 text-xs md:text-sm leading-relaxed text-[var(--color-text-muted)]">
-//                   {step.description}
-//                 </p>
-
-//                 {/* Decorative ghost number */}
-//                 <span className="absolute -bottom-2 -right-1 text-5xl font-black text-[var(--color-text)] opacity-[0.02] group-hover:opacity-[0.05] transition-opacity">
-//                   {step.number}
-//                 </span>
-//               </div>
-//             </motion.div>
-//           ))}
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default ProcessSnapshot;
