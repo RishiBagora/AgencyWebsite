@@ -1,86 +1,85 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 import servicesData from "../../data/servicesData";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 15 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
 export default function ProblemsWeSolve() {
-  const { serviceSlug } = useParams();
+  const { slug } = useParams();
 
-  const service = servicesData.find((item) => item.slug === serviceSlug);
+  const service = useMemo(() => 
+    servicesData.find((item) => item.slug === slug), 
+  [slug]);
 
   if (!service || !service.problemsWeSolve?.length) return null;
 
   return (
-    <section className="bg-[var(--color-bg)] py-20 md:py-32 border-t border-[var(--color-border)] overflow-hidden">
+    <section className="bg-[var(--color-bg)] py-20 md:py-32 border-t border-[var(--color-border)]/40">
       <div className="mx-auto max-w-7xl px-6">
         
-        {/* Header - Editorial Style */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-20">
-          <div className="lg:col-span-7">
-            <motion.span 
-              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="text-[10px] font-black uppercase tracking-[0.4em] text-[var(--color-accent)] mb-4 block"
-            >
-              Pain Points
-            </motion.span>
-            <motion.h2 
-              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="font-heading text-3xl md:text-5xl font-bold tracking-tighter text-[var(--color-text)] leading-tight"
-            >
-              Challenges We <br /> 
-              <span className="text-[var(--color-accent)] italic">Identify & Resolve</span>
-            </motion.h2>
-          </div>
-          <div className="lg:col-span-5">
-            <motion.p 
-              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="text-base text-[var(--color-text-muted)] border-l border-[var(--color-border)] pl-6 leading-relaxed opacity-80"
-            >
-              Most businesses struggle with these hurdles before implementing a structured digital ecosystem.
-            </motion.p>
-          </div>
+        {/* Simple Header */}
+        <div className="max-w-3xl mb-16 md:mb-24">
+         
+          <motion.h2 
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-6xl font-bold tracking-tight text-[var(--color-text)] leading-[1.1]"
+          >
+            The friction we <span className="text-[var(--color-accent)] font-medium italic">eliminate.</span>
+          </motion.h2>
         </div>
 
-        {/* Problem Grid - Minimal & High-End */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {/* Unique Minimalist Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
           {service.problemsWeSolve.map((problem, index) => (
             <motion.div
               key={index}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="group relative bg-[var(--color-surface)] border border-[var(--color-border)] rounded-[2rem] p-8 transition-all duration-500 hover:border-[var(--color-accent)]/30 hover:shadow-xl hover:shadow-[var(--color-accent)]/5"
+              transition={{ delay: index * 0.1 }}
+              className="flex gap-8 pb-8 border-b border-[var(--color-border)]/50"
             >
-              {/* Index Number - Subtle */}
-              <span className="absolute top-6 right-8 text-xs font-black text-[var(--color-accent)] opacity-10 group-hover:opacity-40 transition-opacity">
-                0{index + 1}
-              </span>
-
-              <div className="flex flex-col gap-4">
-                {/* Visual Marker */}
-                <div className="h-1.5 w-8 bg-gray-200 rounded-full group-hover:bg-[var(--color-accent)] transition-all duration-500" />
-                
-                <p className="text-sm md:text-base font-bold text-[var(--color-text)] leading-relaxed tracking-tight group-hover:text-[var(--color-accent)] transition-colors">
-                  {problem}
-                </p>
+              {/* Refined Numbering Indicator */}
+              <div className="flex flex-col items-center">
+                <span className="text-[10px] font-bold text-[var(--color-accent)] mb-2">
+                  0{index + 1}
+                </span>
+                <div className="w-px h-full bg-gradient-to-b from-[var(--color-accent)] to-transparent opacity-20" />
               </div>
 
-              {/* Decorative Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-accent)]/[0.02] to-transparent opacity-0 group-hover:opacity-100 rounded-[2rem] transition-opacity" />
+              {/* Text Content */}
+              <div className="flex-1">
+                <h3 className="text-xl md:text-2xl font-bold text-[var(--color-text)] tracking-tight mb-3">
+                  {problem}
+                </h3>
+                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed opacity-70 font-medium">
+                  We diagnose and resolve this bottleneck to ensure your product maintains high technical standards and user retention.
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Simple Bottom Banner */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-20 p-8 md:p-12 rounded-3xl bg-[var(--color-surface)] border border-[var(--color-border)]/50 flex flex-col md:flex-row items-center justify-between gap-8"
+        >
+          <div className="max-w-md">
+            <p className="text-sm font-bold text-[var(--color-text)] mb-2 uppercase tracking-widest">The Outcome</p>
+            <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
+              Addressing these hurdles results in a more resilient digital infrastructure and a seamless experience for your end-users.
+            </p>
+          </div>
+          <div className="h-px w-full md:w-24 bg-[var(--color-accent)] opacity-20 hidden md:block" />
+          <div className="flex items-center gap-4">
+             <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+             <span className="text-[10px] font-black uppercase tracking-widest">Ready for Deployment</span>
+          </div>
+        </motion.div>
 
       </div>
     </section>

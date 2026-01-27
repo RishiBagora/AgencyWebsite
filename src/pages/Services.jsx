@@ -23,7 +23,7 @@ const Services = () => {
         <ServicesHero/>
         <ServicesIntro/>
         <ServicesList/>   
-        <WhoItsFor/>
+        {/* <WhoItsFor/> */}
         <WhyOurServices/>
         <ProcessSnapshot/>
         <TechStack/>

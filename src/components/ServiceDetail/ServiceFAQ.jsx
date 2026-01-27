@@ -13,10 +13,10 @@ const fadeUp = {
 };
 
 function ServiceFAQs() {
-  const { serviceSlug } = useParams();
+  const { slug } = useParams();
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const service = servicesData.find((item) => item.slug === serviceSlug);
+  const service = servicesData.find((item) => item.slug === slug);
 
   if (!service || !service.faqs || service.faqs.length === 0) return null;
 

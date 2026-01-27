@@ -13,9 +13,9 @@ const fadeUp = {
 };
 
 export default function OurSolution() {
-  const { serviceSlug } = useParams();
+  const { slug } = useParams();
 
-  const service = servicesData.find((item) => item.slug === serviceSlug);
+  const service = servicesData.find((item) => item.slug === slug);
 
   if (!service || !service.ourSolution?.length) return null;
 
@@ -61,10 +61,7 @@ export default function OurSolution() {
               transition={{ delay: index * 0.1 }}
               className="group relative bg-white border border-[var(--color-border)] rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:border-[var(--color-accent)] hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
             >
-              {/* Step Number - Sleek Squircle */}
-              <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--color-bg-soft)] text-[var(--color-accent)] font-black text-xs group-hover:bg-[var(--color-accent)] group-hover:text-white transition-all duration-500 shadow-sm">
-                0{index + 1}
-              </div>
+           
 
               <h3 className="text-xl font-bold text-gray-900 tracking-tight mb-4 group-hover:text-[var(--color-accent)] transition-colors">
                 {solution}
@@ -78,7 +75,7 @@ export default function OurSolution() {
               <div className="mt-8 h-1 w-8 bg-gray-100 rounded-full group-hover:w-16 group-hover:bg-[var(--color-accent)] transition-all duration-500" />
               
               {/* Ghost Numbering */}
-              <span className="absolute bottom-6 right-8 text-6xl font-black text-gray-900 opacity-[0.02] pointer-events-none group-hover:opacity-[0.05] transition-opacity">
+              <span className="absolute bottom-6 right-8 text-6xl font-black text-gray-900 opacity-[0.05] pointer-events-none group-hover:opacity-[0.1] transition-opacity">
                 {index + 1}
               </span>
             </motion.div>

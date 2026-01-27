@@ -10,6 +10,7 @@ import CTA from '../components/home/CTA'
 import useSEO from '../hooks/useSEO'
 import servicesData from "../data/servicesData";
 import { useParams } from "react-router-dom";
+import FAQs from '../components/services/FAQ'
 
 
 
@@ -17,6 +18,7 @@ const ServiceDetail = () => {
  
   // STEP 1: get slug
   const { slug } = useParams();
+console.log("URL slug:", slug);
 
   // STEP 2: find service
   const service = servicesData.find(s => s.slug === slug);
@@ -38,7 +40,7 @@ const ServiceDetail = () => {
       <OurSolution/>
       <WhatYouGet/>
       <ProcessTimeline/>
-      <ServiceFAQs/>
+      <FAQs/>
       <CTA/>
     </div>
   )
