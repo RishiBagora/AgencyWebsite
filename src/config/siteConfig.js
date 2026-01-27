@@ -1,7 +1,7 @@
 import { Links } from "react-router-dom";
 
 const siteConfig = {
-  siteName: "Rishi Bagora",
+  siteName: "Arco Creative Studio",
   tagline: "We Build Websites That Grow Businesses",
   phone: "+91 8302501774",
   whatsapp: "918302501774",

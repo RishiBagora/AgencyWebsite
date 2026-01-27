@@ -10,6 +10,7 @@ import ServiceDetail from './pages/ServiceDetail'
 import Footer from './components/common/Footer'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
+import ProjectDetail from './pages/ProjectDetail'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/services' element={<Services />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path='/portfolio' element={<Portfolio />} />
+        <Route path="/portfolio/:slug" element={<ProjectDetail />} />
         <Route path='/contact' element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsOfService />} />

@@ -45,7 +45,7 @@ function Footer() {
           <div className="lg:col-span-4">
             <Link to="/" className="group flex items-center gap-2 font-heading text-2xl font-bold tracking-tighter text-[var(--color-text)]">
               <div className="h-9 w-9 rounded-xl bg-[var(--color-accent)] flex items-center justify-center text-white text-[12px] group-hover:rotate-12 transition-transform duration-500">
-                {siteConfig.siteName.charAt(0)}
+                <img src="/ARCO.jpg" alt="logo-image" />
               </div>
               {siteConfig.siteName}<span className="text-[var(--color-accent)]">.</span>
             </Link>
