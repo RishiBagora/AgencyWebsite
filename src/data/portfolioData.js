@@ -12,6 +12,7 @@ const portfolioData = [
     category: "Hotels & Resorts",
     location: "Nathdwara, Rajasthan",
     year: "2024",
+    thumbnail: "/images/bhakti.png",
 
     /* ===============================
        HERO SECTION
@@ -20,7 +21,7 @@ const portfolioData = [
       headline: "Premium Hotel Website for Direct Bookings",
       subheadline:
         "A fast, SEO-optimized hotel website designed to increase direct bookings and showcase a premium brand experience.",
-      coverImage: "/images/bhakti/hero.webp",
+      coverImage: "/Videos/bhaktione.mp4",
       ctaText: "Build a Similar Website"
     },
 
@@ -112,12 +113,12 @@ const portfolioData = [
     =============================== */
     gallery: {
       desktop: [
-        "/images/bhakti/desktop-1.webp",
-        "/images/bhakti/desktop-2.webp"
+        "/images/bhaktiMockup1.png",
+        "/images/bhaktiMockup2.png"
       ],
       mobile: [
-        "/images/bhakti/mobile-1.webp",
-        "/images/bhakti/mobile-2.webp"
+        "/images/bhaktiMockup2.png",
+        "/images/bhaktiMockup4.png"
       ]
     },
 

@@ -5,6 +5,12 @@ import useSEO from "../hooks/useSEO";
 import ProjectHero from "../components/project/ProjectHero";
 import ProjectOverview from "../components/project/ProjectOverview";
 import ProjectChallenge from "../components/project/ProjectChallenge";
+import ProjectSolution from "../components/project/ProjectSolution";
+import ProjectProcess from "../components/project/ProjectProcess";
+import ProjectTechStack from "../components/project/ProjectTechStack";
+import ProjectGallery from "../components/project/ProjectGallery";
+import ProjectResults from "../components/project/ProjectResults";
+import ProjectCTA from "../components/project/ProjectCTA";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -30,6 +36,12 @@ const ProjectDetail = () => {
      <ProjectHero project={project} />
      <ProjectOverview project={project} />
      <ProjectChallenge project={project} />
+     <ProjectSolution project={project} />
+     <ProjectProcess project={project} />
+     <ProjectTechStack project={project}/>
+     <ProjectGallery project={project} />
+     <ProjectResults project={project} />
+     <ProjectCTA project={project} />
     </div>
   );
 };

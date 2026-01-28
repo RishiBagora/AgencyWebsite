@@ -94,9 +94,13 @@ export default function ProjectHero({ project }) {
             className="relative group cursor-crosshair"
           >
             {/* Main Project Image */}
-            <div className="overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl aspect-[16/9] lg:aspect-[21/9]">
-              <motion.img
+            <div className="overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl aspect-[16/9] lg:aspect-[16/9]">
+              <motion.video
                 whileHover={{ scale: 1.03 }}
+                autoPlay
+                loop
+                  muted
+                  
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                 src={coverImage}
                 alt={title}
@@ -113,11 +117,12 @@ export default function ProjectHero({ project }) {
             >
               <div className="flex items-center gap-12">
                 <div>
-                  <p className="text-[9px] font-black uppercase tracking-widest text-[var(--color-accent)] mb-1">Core Objective</p>
-                  <p className="text-sm font-bold text-[var(--color-text)]">Conversion Design</p>
+                  <p className="text-[9px] font-black uppercase tracking-widest text-[var(--color-accent)] mb-1">See Live</p>
+                  <p className="text-sm font-bold text-[var(--color-text)]">Website</p>
                 </div>
                 <button
-                  onClick={() => navigate("/contact")}
+                  
+                  onClick={() => window.open("https://hotelbhaktipalace.vercel.app", "_blank")}
                   className="h-12 w-12 rounded-full bg-[var(--color-text)] text-[var(--color-bg)] flex items-center justify-center hover:bg-[var(--color-accent)] transition-colors duration-300"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

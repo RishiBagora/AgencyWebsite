@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PortfolioCard from "./PortfolioCard";
 
 export default function PortfolioGrid({ projects }) {
@@ -5,7 +6,10 @@ export default function PortfolioGrid({ projects }) {
     <section className="mx-auto max-w-7xl px-6 pb-24">
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
+         
+         <Link to={`/portfolio/${project.slug}`}>
           <PortfolioCard key={project.id} project={project} />
+          </Link>
         ))}
       </div>
 
