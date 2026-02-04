@@ -16,7 +16,7 @@ import TrustStrip from '../components/home/TrustStrip'
 
 const Home = () => {
   useSEO({
-  title: "Arco Creative Studio | Website development agency in nathdwara ",
+  title: "Website Development Agency in Nathdwara | ARCO Creative Studio ",
   description: "Professional website development, e-commerce, UI/UX, and business-focused digital solutions for Indian brands. Fast, modern, SEO-friendly websites" + "Services: " + keywords.home.join(", "),
   canonical: "https://arcocreativestudio.vercel.app/"
 });
