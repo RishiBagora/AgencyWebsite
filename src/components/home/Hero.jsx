@@ -96,7 +96,7 @@ function Hero() {
               className="mt-12 pt-8 border-t border-[var(--color-border)] flex flex-wrap gap-x-8 gap-y-4"
             >
               {[
-                { label: "50+", sub: "Projects" },
+                { label: "10+", sub: "Projects" },
                 { label: "100%", sub: "Satisfaction" },
                 { label: "24/7", sub: "Support" },
               ].map((stat, i) => (

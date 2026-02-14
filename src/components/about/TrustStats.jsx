@@ -2,8 +2,8 @@ import { motion, useInView, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 const STATS = [
-  { value: 50, suffix: "+", label: "Projects Delivered", description: "Across diverse industries." },
-  { value: 5, suffix: "+", label: "Years Experience", description: "Design and development." },
+  { value: 10, suffix: "+", label: "Projects Delivered", description: "Across diverse industries." },
+  { value: 1, suffix: "+", label: "Years Experience", description: "Design and development." },
   { value: "Pan-India", suffix: "", label: "Client Presence", description: "Serving multiple states." },
   { value: "Long-Term", suffix: "", label: "Relationships", description: "Built on ongoing trust." },
 ];

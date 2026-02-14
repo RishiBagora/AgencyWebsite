@@ -249,6 +249,77 @@ const servicesData = [
       heading: "Upgrade Your Website",
       buttonText: "Start Website Redesign"
     }
+  },{
+  slug: "qr-menu-for-cafes",
+serviceName: "QR Menu for Cafes",
+hero: {
+  heading: "Smart QR Menu System for Modern Cafes",
+  subheading:
+    "Replace printed menus with stylish, contactless QR menus that enhance customer experience and make menu updates effortless.",
+  ctaText: "Get Your QR Menu Setup"
+},
+intro: {
+  title: "Digital QR Menu Solutions for Cafes",
+  description:
+    "Upgrade your cafe with a modern QR-based digital menu system. Customers simply scan the code placed on tables and view your menu instantly on their phones — no apps required."
+},
+problemsWeSolve: [
+  "High printing costs for menu updates",
+  "Outdated or damaged physical menus",
+  "Slow ordering process",
+  "Limited menu flexibility",
+  "Unhygienic shared menu cards"
+],
+ourSolution: [
+  "Custom branded digital menu design",
+  "Instant QR code generation",
+  "Easy menu update system",
+  "Mobile-optimized menu layout",
+  "Add-ons like offers & featured items highlight"
+],
+whatYouGet: [
+  "Unique QR codes for tables",
+  "Mobile-friendly digital menu",
+  "Category-wise item display",
+  "Image & price integration",
+  "Instant menu editing access",
+  "Basic analytics (menu views tracking)"
+],
+processTimeline: [
+  "Requirement discussion",
+  "Menu structure planning",
+  "Design & branding setup",
+  "QR generation & testing",
+  "Deployment & staff guidance"
+],
+techStack: ["React", "Tailwind CSS", "HTML5", "JavaScript", "Cloud Hosting"],
+whoItsFor: [
+  "Cafes & coffee shops",
+  "Restaurants",
+  "Cloud kitchens",
+  "Food courts & quick service outlets"
+],
+faqs: [
+  {
+    question: "Do customers need to install any app?",
+    answer:
+      "No. Customers simply scan the QR code using their phone camera and the menu opens in their browser."
+  },
+  {
+    question: "Can we update menu items anytime?",
+    answer:
+      "Yes. You can update prices, items, or offers anytime without reprinting anything."
+  },
+  {
+    question: "Is it suitable for small cafes?",
+    answer:
+      "Absolutely. QR menus are cost-effective and perfect for small and medium cafes."
+  }
+],
+cta: {
+  heading: "Upgrade Your Cafe with a Smart QR Menu",
+  buttonText: "Get QR Menu for My Cafe"
+}
   }
 ];
 
