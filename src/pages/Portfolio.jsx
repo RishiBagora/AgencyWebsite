@@ -9,6 +9,7 @@ import PortfolioStats from '../components/portfolio/PortfolioStats'
 import PortfolioCTA from '../components/portfolio/PortfolioCTA'
 import CTA from '../components/home/CTA'
 import useSEO from '../hooks/useSEO'
+import TrustStats from '../components/about/TrustStats'
 
 export default function Portfolio() {
 
@@ -30,7 +31,7 @@ export default function Portfolio() {
     <div className="mt-20">
       <PortfolioHero/>
       <PortfolioIntro/>
-      <PortfolioStats/>
+      <TrustStats/>
       <PortfolioFilter
         activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}

@@ -13,7 +13,7 @@ const portfolioData = [
     location: "Nathdwara, Rajasthan",
     year: "2024",
     thumbnail: "/images/bhakti.png",
-
+    liveWebsite: "https://hotelbhaktipalace.vercel.app",
     /* ===============================
        HERO SECTION
     =============================== */
@@ -159,7 +159,170 @@ const portfolioData = [
       description:
         "Case study of Hotel Bhakti Palace website showcasing premium hotel website design, fast performance, and SEO optimization for direct bookings."
     }
+  },
+  {
+  /* ===============================
+     BASIC INFO
+  =============================== */
+  id: "pf-1",
+  slug: "rishi-bagora-portfolio",
+  title: "Rishi Bagora Portfolio",
+  industry: "Personal Brand",
+  category: "Portfolio Website",
+  location: "Rajasthan, India",
+  year: "2025",
+  thumbnail: "/images/rishibagora.png",
+liveWebsite: "https://rishibagora.vercel.app",
+  /* ===============================
+     HERO SECTION
+  =============================== */
+  hero: {
+    headline: "Modern Portfolio Website for a Web Developer & Digital Agency",
+    subheadline:
+      "A high-performance portfolio website designed to showcase projects, attract clients, and build a strong personal brand.",
+    coverImage: "/Videos/rishibagora.mp4",
+    ctaText: "Build a Similar Portfolio"
+  },
+
+  /* ===============================
+     OVERVIEW
+  =============================== */
+  overview: {
+    clientType: "Personal Brand / Web Developer",
+    projectType: "Portfolio Website Design & Development",
+    timeline: "2 Weeks",
+    servicesProvided: [
+      "UI/UX Design",
+      "Frontend Development",
+      "Animation & Interactions",
+      "Performance Optimization",
+      "SEO Setup"
+    ],
+    shortDescription:
+      "A modern developer portfolio built to showcase projects, skills, and services while converting visitors into potential clients."
+  },
+
+  /* ===============================
+     CHALLENGES
+  =============================== */
+  challenges: [
+    "Needed a strong personal brand presence to attract freelance clients",
+    "Wanted a highly modern and premium UI to stand out from typical portfolios",
+    "Required smooth animations without affecting performance",
+    "Needed a clear structure to showcase projects and services effectively"
+  ],
+
+  /* ===============================
+     SOLUTION
+  =============================== */
+  solution: {
+    approach:
+      "We designed a visually engaging portfolio focused on storytelling, smooth animations, and conversion-focused layout.",
+    highlights: [
+      "Modern and minimal UI with strong typography",
+      "Smooth scroll-based animations and micro-interactions",
+      "Project-focused storytelling sections",
+      "Optimized performance and SEO-ready structure"
+    ]
+  },
+
+  /* ===============================
+     PROCESS
+  =============================== */
+  process: [
+    {
+      step: "Research & Planning",
+      description:
+        "Defined personal brand goals, target audience, and portfolio structure."
+    },
+    {
+      step: "Wireframing & UI Design",
+      description:
+        "Designed a clean and modern layout to highlight projects and services."
+    },
+    {
+      step: "Development",
+      description:
+        "Built a fast and responsive website using modern frontend tools."
+    },
+    {
+      step: "Animations & Polish",
+      description:
+        "Added scroll animations and micro-interactions for a premium feel."
+    },
+    {
+      step: "Launch & Optimization",
+      description:
+        "Optimized SEO, performance, and deployed the site."
+    }
+  ],
+
+  /* ===============================
+     TECH STACK
+  =============================== */
+  techStack: [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "GSAP",
+    "Vercel Deployment",
+    "SEO Best Practices"
+  ],
+
+  /* ===============================
+     GALLERY
+  =============================== */
+  gallery: {
+    desktop: [
+      "/images/rishimockup.png",
+      "/images/rishimockup2.png"
+    ],
+    mobile: [
+      "/images/rishimockup.png",
+      "/images/rishimockup2.png"
+    ]
+  },
+
+  /* ===============================
+     RESULTS
+  =============================== */
+  results: [
+    "Strong personal brand presence online",
+    "Improved client inquiries and lead generation",
+    "High performance and fast loading speed",
+    "Professional showcase of projects and services"
+  ],
+
+  /* ===============================
+     TESTIMONIAL (OPTIONAL)
+  =============================== */
+  testimonial: {
+    enabled: true,
+    quote:
+      "This portfolio perfectly represents my skills and has helped me attract new clients.",
+    author: "Rishi Bagora"
+  },
+
+  /* ===============================
+     LINKS
+  =============================== */
+  links: {
+    liveWebsite: "https://rishibagora.vercel.app",
+    contactCTA: "/contact"
+  },
+
+  /* ===============================
+     SEO (CASE STUDY SEO)
+  =============================== */
+  seo: {
+    title:
+      "Rishi Bagora Portfolio Case Study | Developer Portfolio Website",
+    description:
+      "Case study of a modern developer portfolio website featuring premium UI, smooth animations, and performance optimization."
   }
+}
+
 ];
 
 export default portfolioData;

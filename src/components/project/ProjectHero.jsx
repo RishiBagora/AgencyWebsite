@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 /* ------------------ ANIMATIONS ------------------ */
@@ -29,6 +30,7 @@ export default function ProjectHero({ project }) {
     title,
     industry,
     location,
+    liveWebsite,
     year,
     hero: { headline, subheadline, coverImage, ctaText },
   } = project;
@@ -115,6 +117,7 @@ export default function ProjectHero({ project }) {
               transition={{ delay: 0.6 }}
               className="absolute -bottom-8 left-8 md:left-12 px-8 py-6 bg-[var(--color-surface)]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl hidden md:block"
             >
+              <Link to={liveWebsite} target="_blank">            
               <div className="flex items-center gap-12">
                 <div>
                   <p className="text-[9px] font-black uppercase tracking-widest text-[var(--color-accent)] mb-1">See Live</p>
@@ -122,14 +125,15 @@ export default function ProjectHero({ project }) {
                 </div>
                 <button
                   
-                  onClick={() => window.open("https://hotelbhaktipalace.vercel.app", "_blank")}
+                  
                   className="h-12 w-12 rounded-full bg-[var(--color-text)] text-[var(--color-bg)] flex items-center justify-center hover:bg-[var(--color-accent)] transition-colors duration-300"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M7 17L17 7M17 7H7M17 7V17" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
-              </div>
+              </div> 
+              </Link>
             </motion.div>
           </motion.div>
 
