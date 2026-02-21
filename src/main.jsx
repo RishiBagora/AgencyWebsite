@@ -4,16 +4,14 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css'
 import App from './App.jsx'
 import ScrollToTop from './components/common/ScrollToTop.jsx';
-import { inject } from '@vercel/analytics';
-inject();
-
+import { Analytics } from "@vercel/analytics/react"
 createRoot(document.getElementById('root')).render(
 
     <BrowserRouter>
 
     <ScrollToTop/>
   <App />
-
+<Analytics/>
 
 
     
