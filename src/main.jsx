@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css'
 import App from './App.jsx'
 import ScrollToTop from './components/common/ScrollToTop.jsx';
-
+import { Analytics } from "@vercel/analytics/next"
 
 createRoot(document.getElementById('root')).render(
 
@@ -12,6 +12,7 @@ createRoot(document.getElementById('root')).render(
 
     <ScrollToTop/>
   <App />
+  <Analytics/>
 
 
     
